@@ -1,0 +1,70 @@
+除了常规的:
+----------------------------------------------------------------------------------
+cat:由第一行开始显示内容，并将所有内容输出
+tac:从最后一行倒序显示内容，并将所有内容输出
+more:根据窗口大小，一页一页的现实文件内容
+less:和more类似，但其优点可以往前翻页，而且进行可以搜索字符
+head:只显示头几行
+tail:只显示最后几行
+nl:类似于cat -n，显示时输出行号
+tailf:类似于tail -f
+-----------------------------------------------------------------------------------
+Linux花式读取文件内容
+ps:目标是获取flag.txt的内容
+
+static-sh读取文件：
+
+static-sh ./flag.txt
+#输出结果：
+./flag.txt: line 1: flag{this_is_a_test}: not found
+-----------------------------------------------------------------------------------
+paste读取文件:
+paste ./flag.txt /etc/passwd
+
+#输出结果：
+flag{this_is_a_test} root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+----------------------------------------------------------------------------------
+diff读取文件 :
+diff ./flag.txt /etc/passwd
+
+#输出结果：
+1c1,45
+< flag{this_is_a_test}
+\ No newline at end of file
+---
+> root:x:0:0:root:/root:/bin/bash
+> daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+> bin:x:2:2:bin:/bin:/usr/sbin/nologin
+> sys:x:3:3:sys:/dev:/usr/sbin/nologin
+> sync:x:4:65534:sync:/bin:/bin/sync
+-----------------------------------------------------------------------------------
+od读取文件
+
+od -a ./flag.txt
+#输出结果：
+0000000 f l a g { t h i s _ i s _ a _ t
+0000020 e s t }
+0000024
+-----------------------------------------------------------------------------------
+bzmore读取文件:
+
+bzmore ./flag.txt
+#输出结果：
+------> ./flag.txt <------
+flag{this_is_a_test}
+-----------------------------------------------------------------------------------
+bzless读取文件：
+bzless ./flag.txt
+
+echo `bzless ./flag.txt`
+#输出结果：
+------> ./flag.txt <------ flag{this_is_a_test}
+
+-----------------------------------------------------------------------------------
+curl读取文件：
+
+curl file:///home/coffee/flag
