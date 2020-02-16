@@ -1,0 +1,9 @@
+
+Mona.py
+=========================
+用Mona.py去發現JMP ESP
+Rebase True 指的是每次重啟地址都會發生變化
+OS DLL True指的是Module是OS的DLL是每一個相同系統都會有的DLL
+
+nasm_shell.rb
+用來轉assembly到二進制
