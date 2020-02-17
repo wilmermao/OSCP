@@ -7,3 +7,5 @@ OS DLL True指的是Module是OS的DLL是每一個相同系統都會有的DLL
 
 nasm_shell.rb
 用來轉assembly到二進制
+
+buffer memory address要反轉
