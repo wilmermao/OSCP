@@ -9,3 +9,5 @@ nasm_shell.rb
 用來轉assembly到二進制
 
 buffer memory address要反轉
+
+\x90 * 8    (\x90是no operation) 不加有時shellcode頭八位會被CPU刷掉
