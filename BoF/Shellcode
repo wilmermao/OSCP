@@ -1,2 +1,4 @@
 用msfvenom build shellcode
 用msfvenom -b 去除bad char
+
+用exit來退出連線會導致process crash，做Payload階段加EXITFUNC=thread可避免
