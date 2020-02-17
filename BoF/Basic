@@ -12,4 +12,4 @@ buffer memory address要反轉
 
 NOP-sled
 ====================================================================================================
-\x90 * 8    (\x90是no operation) 不加有時shellcode頭八位會被CPU刷掉
+\x90 * 8    (\x90是no operation) 加在shellcode前面以防一開始pointer就跳到shellcode的中間
