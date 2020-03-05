@@ -1,0 +1,21 @@
+ipconfig /all; ipconfig /displaydns, netstat -bano; netstat -r
+net view; netview /domain
+net user /doamin; net user %username% /domain
+net accounts; net share
+net group "Domain Controllers" /domain
+
+net localgroup administrators username /add
+net share name$=C:\ /unlimited
+net user username /active:yes /domain
+
+wmic nicconfig get ipaddress,macaddress
+wmic computersystem get username
+wmic netlogin get name,lastlogon
+wmic process get caption, executablepath,commandline
+wmic process where name="calc.exe" call terminate
+wmic os get name,servicepackmajorversion
+wmic product get name,version
+wmic product where name="name" call uninstall /nointeractive
+wmic share get /ALL
+wmic /node:"machinename" path Win32_TermainalServiceSetting where AllowTSConnections="0" call SetAllowTSConnections"1"
+wmic nteventlog get path,filename, writeable
