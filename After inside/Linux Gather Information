@@ -1,0 +1,7 @@
+/etc/resolv.conf
+/etc/passwd
+/etc/shadow
+whoami; who -a
+ifconfig -a; iptab les -L -n; netstat -rn
+uname -a; ps aux
+dpkg -l | head
