@@ -12,10 +12,12 @@ wmic nicconfig get ipaddress,macaddress
 wmic computersystem get username
 wmic netlogin get name,lastlogon
 wmic process get caption, executablepath,commandline
-wmic process where name="calc.exe" call terminate
+ 查看進程和是由那條command所執行的 
+wmic process where name="calc.exe" call terminate 
 wmic os get name,servicepackmajorversion
 wmic product get name,version
-wmic product where name="name" call uninstall /nointeractive
+wmic product where name="%name%" call uninstall /nointeractive
 wmic share get /ALL
-wmic /node:"machinename" path Win32_TermainalServiceSetting where AllowTSConnections="0" call SetAllowTSConnections"1"
+wmic /node:"%machinename%" path Win32_TermainalServiceSetting where AllowTSConnections="0" call SetAllowTSConnections "1"
+  Enable Remote Desktop
 wmic nteventlog get path,filename, writeable
