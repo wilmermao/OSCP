@@ -1,0 +1,5 @@
+用 icacls 來找file 的權限
+icacls boot.ini
+icacls c:\windows\*.exe /save filename /  t
+查看權限代達方式
+http://www.coopware.in2.info/_ntfsacl_ht.htm
