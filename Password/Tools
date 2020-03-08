@@ -9,7 +9,7 @@ CUPP
   https://github.com/Mebus/cupp
   python cup.py -i
   
-CWEL
+CewL
 cewl ipaddress
  -m min char len, 大於設定的字符長度才收集
  -d 爬網深度
