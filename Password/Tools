@@ -1,4 +1,17 @@
 內建wordlist
   /usr/share/wordlists
+
 用來創建自己的wordlist
   crunch
+
+CUPP
+  對個人密碼比較有用
+  https://github.com/Mebus/cupp
+  python cup.py -i
+  
+CWEL
+cewl ipaddress
+ -m min char len, 大於設定的字符長度才收集
+ -d 爬網深度
+ -e 收集email信息
+ -c 每個單詞出現次數
