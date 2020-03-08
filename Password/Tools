@@ -15,3 +15,7 @@ cewl ipaddress
  -d 爬網深度
  -e 收集email信息
  -c 每個單詞出現次數
+
+修改wordlist
+ John the ripper
+
