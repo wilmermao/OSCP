@@ -19,3 +19,5 @@ cewl ipaddress
 修改wordlist
  John the ripper
 
+過濾wordlist
+  pw-inspector
