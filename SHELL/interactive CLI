@@ -1,0 +1,6 @@
+https://forum.hackthebox.eu/discussion/142/obtaining-a-fully-interactive-shell
+
+python -c 'import pty;pty.spawn("/bin/bash");'
+CTRL+Z
+stty raw -echo
+fg
