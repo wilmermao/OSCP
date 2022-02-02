@@ -1,0 +1,6 @@
+Python -m SimpleHTTPServer 8080
+Python3 -m http.server 8080
+PHP -S 0.0.0.0:8080
+ruby -run -e httpd . -p 8080
+
+busybox httpd -f -p 8080
